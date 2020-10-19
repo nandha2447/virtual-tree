@@ -48,7 +48,9 @@ const Content = ({ data }) => {
           <Typography variant="h5">Submission Details</Typography>
           <Typography>{`Submission Date: ${data?.submissionDetails.submission_date}`}</Typography>
           <Typography>{`Submission Name: ${data?.submissionDetails.submission_name}`}</Typography>
-          <Typography>{`Submission Organization: ${data?.submissionDetails.submission_organization}`}</Typography>
+          {data.submissionDetails.submission_organization && (
+            <Typography>{`Submission Organization: ${data?.submissionDetails.submission_organization}`}</Typography>
+          )}
         </>
       )}
     </>
